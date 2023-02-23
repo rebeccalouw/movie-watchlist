@@ -1,6 +1,12 @@
-html, body {
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html, body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: #111827;
@@ -12,27 +18,37 @@ html, body {
 }
 
 header {
-    background: black;
-    background-image: url("images/movie-background.png");
-    height: 200px;
-    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url("images/cinema-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2.5em 0 2.5em;
+    color: white;
 }
 
-header h1 {
-    font-size: 3em;
+header > h1 {
+    font-size: 3rem;
     font-weight: 800;
     letter-spacing: -.05em;
+    margin-bottom: 1.5em;
+    background: black;
+    padding: 0.1em;
 }
 
-header a {
+header > a {
     color: white;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
+    margin-bottom: 4em;
+    background: black;
+    padding: 0.3em;
+    color: #DBF227;
 }
 
 
@@ -54,16 +70,16 @@ form {
     margin-left: 1em;
 }
 
-form input {
+form > input {
     border: none;
     text-align: left;
-    height: 2em;
+    padding: 0.425em;
     width: 360px;
     color: #6B7280;
     cursor: auto;
 }
 
-form button {
+form > button {
     border: none;
     border-left:  1px solid #D1D5DB;
     background: #F9FAFB;
@@ -86,9 +102,10 @@ form button {
 
 #initial-icon {
     filter: invert(71%) sepia(85%) saturate(3%) hue-rotate(322deg) brightness(106%) contrast(92%);
+    margin-bottom: 1em;
 }
 
-.initial-display a {
+.initial-display > a {
     text-decoration: none;
     cursor: pointer;
     font-weight: 700;
@@ -97,7 +114,6 @@ form button {
 
 .movie-card {
     display: flex;
-    flex-direction: row;
     align-items: center;
     margin: 0 1.5em 0 1.5em;
     height: 200px;
@@ -105,7 +121,7 @@ form button {
     border-bottom: 1.5px solid #E5E7EB;
 }
 
-.movie-card img {
+.movie-card > img {
     height: 80%;
 }
 
@@ -119,36 +135,34 @@ form button {
 .movie-title {
     display: flex;
     align-items: center;
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
 }
 
-.movie-title h3 {
-    font-size: 1.125em;
+.movie-title > h3 {
+    font-size: 1.125rem;
     line-height: 1.25em;
     font-weight: 500;
     margin-right: 0.7em;
 }
 
-.movie-title p {
-    font-size: 12px;
+.movie-title > p {
+    font-size: 0.75rem;
     font-weight: 400;
 }
 
 .movie-info {
     display: flex;
     align-items: center;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     line-height: 1.25em;
-    margin-top: 0;
-    margin-bottom: -1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.movie-info p {
+.movie-info > p {
     margin-right: 20px;
 }
 
-.movie-info button {
+.movie-info > button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -159,7 +173,7 @@ form button {
     cursor: pointer;
 }
 
-button img {
+button > img {
     pointer-events: none;
 }
 
@@ -167,15 +181,14 @@ button img {
 .plus-icon,
 .remove-icon {
     filter: invert(71%) sepia(85%) saturate(3%) hue-rotate(322deg) brightness(106%) contrast(92%);
-    width: 16px;
-    margin-right: 5px;
 }
 
+.plus-icon,
+.remove-icon,
 .check-icon {
     width: 16px;
     margin-right: 5px;
 }
-
 
 .movie-body {
     margin-top: 0;
@@ -189,3 +202,6 @@ button img {
     color: #6B7280;
 }
 
+.empty-watchlist {
+    margin-bottom: 2em;
+}
