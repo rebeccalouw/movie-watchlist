@@ -83,7 +83,6 @@ function addToMyWatchlist(el) {
     const movie = movieSearch.find((movie) => movie.imdbID === id)
     const index = myWatchlist.findIndex((movie) => movie.imdbID === id)
 
-    // Adds the movie to the watchlist
     if (index === -1) {
         myWatchlist.push(movie)
         el.target.children[0].src = "images/check-icon.png"
@@ -91,7 +90,6 @@ function addToMyWatchlist(el) {
         el.target.children[0].classList.add("check-icon")
     } 
     else {
-    // Removes from the watchlist if it is already in it 
         myWatchlist.splice(index, 1)
         el.target.children[0].src = "images/plus-icon.svg"
         el.target.children[0].classList.remove("check-icon")
@@ -109,10 +107,3 @@ function renderErrorMessage() {
 
 
 
-// research local storage
-// save to local storage
-// console.log error and call error function
-
-// build watchlist page
-// change background top
-// build mobile version
