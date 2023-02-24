@@ -48,21 +48,15 @@ function getFullDetails(movieId) {
                     const {Poster, Title, imdbRating, imdbID, Runtime, Genre, Plot} = data
 
                     movieHtml += `
-                    <section class="movie-card">
-                        <img src="${Poster}" class="movie-poster">
-                        <div class="movie-content">
-                            <div class="movie-title">
-                                <h3>${Title}</h3>
-                                <p>⭐ ${imdbRating}</p>
-                            </div>
-                            <div class="movie-info">
-                                <p>${Runtime}</p>
-                                <p>${Genre}</p>
-                                <button class="addBtn" id="${imdbID}"><img class="plus-icon" src="images/plus-icon.svg" alt="+">Watchlist</button>
-                            </div>
-                            <div class="movie-body">
-                                <p>${Plot}</p>
-                            </div>
+                    <section class="movie-content">
+                        <div class="movie-card">
+                            <img src="${Poster}" class="movie-poster">
+                            <h3 class="movie-title">${Title}</h3>
+                            <p class="movie-rating">⭐ ${imdbRating}</p>
+                            <p class="movie-runtime">${Runtime}</p>
+                            <p class="movie-genre">${Genre}</p>
+                            <button class="addBtn" id="${imdbID}"><img class="plus-icon" src="images/plus-icon.svg" alt="+">Watchlist</button>
+                            <p class="movie-body">${Plot}</p>
                         </div>
                     </section>
                     `
