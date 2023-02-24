@@ -49,11 +49,11 @@ function getFullDetails(movieId) {
 
                     movieHtml += `
                     <section class="movie-card">
-                        <img src="${Poster}">
+                        <img src="${Poster}" class="movie-poster">
                         <div class="movie-content">
                             <div class="movie-title">
                                 <h3>${Title}</h3>
-                                <p>⭐ ${imdbRating}</p>
+                                <p> ${imdbRating}</p>
                             </div>
                             <div class="movie-info">
                                 <p>${Runtime}</p>
@@ -85,7 +85,7 @@ function addToMyWatchlist(el) {
 
     if (index === -1) {
         myWatchlist.push(movie)
-        el.target.children[0].src = "images/check-icon.png"
+        el.target.children[0].src = "images/check-icon-copy.png"
         el.target.children[0].classList.remove("plus-icon")
         el.target.children[0].classList.add("check-icon")
     } 

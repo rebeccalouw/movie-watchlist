@@ -19,10 +19,10 @@ html, body {
 
 header {
     background-color: rgba(0, 0, 0, 1);
-    background-image: url("images/cinema-background.jpg");
+    background-image: url("images/florencia-viadana-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 220px;
+    height: 200px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -35,9 +35,7 @@ header > h1 {
     font-size: 3rem;
     font-weight: 800;
     letter-spacing: -.05em;
-    margin-bottom: 1.5em;
-    background: black;
-    padding: 0.1em;
+    margin-bottom: 0.2em;
 }
 
 header > a {
@@ -45,9 +43,6 @@ header > a {
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-    margin-bottom: 4em;
-    background: black;
-    padding: 0.3em;
     color: #DBF227;
 }
 
@@ -121,7 +116,7 @@ form > button {
     border-bottom: 1.5px solid #E5E7EB;
 }
 
-.movie-card > img {
+.movie-poster {
     height: 80%;
 }
 
@@ -139,7 +134,7 @@ form > button {
 
 .movie-title > h3 {
     font-size: 1.125rem;
-    line-height: 1.25em;
+    line-height: 1.25;
     font-weight: 500;
     margin-right: 0.7em;
 }
@@ -205,3 +200,78 @@ button > img {
 .empty-watchlist {
     margin-bottom: 2em;
 }
+
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    header > h1 {
+        font-size: 2.25em;
+        margin-bottom: 0.75em;
+    }
+
+    form {
+        margin: -1em 1em 0 1em;
+    }
+
+    .search-icon {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .movie-card {
+        margin: 0 0.75em 0 0.75em;
+        height: 200px;
+    }
+
+    .movie-poster {
+        height: 60%;
+    }
+
+    .movie-content {
+        margin-left: 0.75em;
+    }
+
+    .movie-title {
+        display: grid;
+        grid-template-columns: 2fr 0.7fr;
+    }
+    
+    .movie-title > h3 {
+        font-size: 0.9rem;
+        line-height: 1;
+        margin-right: 0.3em;
+    }
+
+    .movie-info {
+        margin-bottom: 0.5em;
+    }
+
+    .movie-info > p {
+        margin-bottom: 0.5em;
+    }
+
+    .movie-body {
+        grid-area: body;
+        -webkit-line-clamp: 5;
+        font-size: 0.8rem;
+        line-height: 1.2;
+        font-weight: 300;
+    } 
+    
+    .plus-icon,
+    .remove-icon,
+    .check-icon {
+        width: 12px;
+        margin-right: 5px;
+}
+}
+

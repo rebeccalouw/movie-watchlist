@@ -28,7 +28,7 @@ function getFullDetails(movieId) {
 
                     movieHtml += `
                     <section class="movie-card">
-                        <img src="${Poster}">
+                        <img src="${Poster}" class="movie-poster">
                         <div class="movie-content">
                             <div class="movie-title">
                                 <h3>${Title}</h3>
