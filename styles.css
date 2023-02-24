@@ -201,9 +201,8 @@ button > img {
     margin-top: 0;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical;  
     overflow: hidden;
-    text-overflow: ellipsis;
     font-size: 0.9rem;
     line-height: 1.5;
     color: #6B7280;
@@ -242,8 +241,8 @@ button > img {
     .movie-card {
         display: grid;
         grid-template-columns: 1em 1fr 1em 1fr 1fr 1fr 1em;
-        grid-template-rows: 1em 1rem 1.25rem 1em 130px 1em;
-        height: 240px;
+        grid-template-rows: 1em auto auto 0.1em 125px 1em;
+        height: auto;
     }
 
     .movie-poster {
@@ -262,6 +261,7 @@ button > img {
     .movie-rating {
         grid-row: 2 / 3;
         grid-column: 5 / 6;
+        margin: auto;
     }
 
     .movie-runtime {
@@ -283,6 +283,12 @@ button > img {
     .addBtn {
         grid-row: 2 / 3;
         grid-column: 6 / 7; 
+        margin: auto;
+    }
+
+    .movie-card > button {
+        font-size: 0.8rem;
+        line-height: 1.25em;
     }
 
     .movie-body {
