@@ -228,8 +228,8 @@ button > img {
     }
 
     .movie-card {
-        margin: 0 0.75em 0 0.75em;
-        height: 200px;
+        margin: 0 1em 0 1em;
+        height: 220px;
     }
 
     .movie-poster {
@@ -242,7 +242,7 @@ button > img {
 
     .movie-title {
         display: grid;
-        grid-template-columns: 2fr 0.7fr;
+        grid-template-columns: 2fr 0.65fr;
     }
     
     .movie-title > h3 {
@@ -253,17 +253,20 @@ button > img {
 
     .movie-info {
         margin-bottom: 0.5em;
+        display: grid;
+        grid-template-columns: 1fr 3fr 2fr 5px;
     }
 
     .movie-info > p {
         margin-bottom: 0.5em;
+        line-height: 0.95;
     }
 
     .movie-body {
         grid-area: body;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 6;
         font-size: 0.8rem;
-        line-height: 1.2;
+        line-height: 1.1;
         font-weight: 300;
     } 
     

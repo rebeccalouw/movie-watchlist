@@ -41,7 +41,7 @@ function getMoviesFromSearchBar(e) {
 
 
 function getFullDetails(movieId) {
-    fetch(`https://www.omdbapi.com/?apikey=${APIkey}&i=${movieId}&plot=full`)
+    fetch(`https://www.omdbapi.com/?apikey=${APIkey}&i=${movieId}&plot=short`)
                 .then(res => res.json())
                 .then(data => { 
                     movieSearch.push(data)
@@ -53,7 +53,7 @@ function getFullDetails(movieId) {
                         <div class="movie-content">
                             <div class="movie-title">
                                 <h3>${Title}</h3>
-                                <p> ${imdbRating}</p>
+                                <p>⭐ ${imdbRating}</p>
                             </div>
                             <div class="movie-info">
                                 <p>${Runtime}</p>
