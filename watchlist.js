@@ -21,7 +21,7 @@ document.addEventListener("click", (e) => {
 
 
 function getFullDetails(movieId) {
-    fetch(`https://www.omdbapi.com/?apikey=${APIkey}&i=${movieId}&plot=full`)
+    fetch(`https://www.omdbapi.com/?apikey=${APIkey}&i=${movieId}&plot=short`)
                 .then(res => res.json())
                 .then(data => { 
                     const {Poster, Title, imdbRating, imdbID, Runtime, Genre, Plot} = data
@@ -34,7 +34,7 @@ function getFullDetails(movieId) {
                             <p class="movie-rating">⭐ ${imdbRating}</p>
                             <p class="movie-runtime">${Runtime}</p>
                             <p class="movie-genre">${Genre}</p>
-                            <button class="addBtn" id="${imdbID}"><img class="plus-icon" src="images/plus-icon.svg" alt="+">Watchlist</button>
+                            <button class="removeBtn" id="${imdbID}"><img class="plus-icon" src="images/remove-icon.svg" alt="-">Watchlist</button>
                             <p class="movie-body">${Plot}</p>
                         </div>
                     </section>
