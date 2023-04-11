@@ -4,7 +4,7 @@
 
 ## Demo overview
 This project consists of two pages: a Homepage and a Watchlist Page. 
-The user types a movie in the search bar, the app reaches out to the OMDb API and once the results are displayed, the user can add the movie to their personal watchlist (using LocalStorage). By clicking on 'My Watchlist', the user can visualise their list and remove items that are not relevant anymore.
+Users can search for movies and add to their personal watchlist.
 
 Possible actions:
 - Typing a movie title on the search bar
@@ -18,9 +18,9 @@ Possible actions:
 - The app uses the input from the search bar to inform the API call 
 - The API provides data with the movie titles searched for
 - That data is used to create the html and render the movie options to the screen
-- Once the user clicks to add movie to watchlist, that information is saved in Local Storage 
+- Once the user clicks to add movie to watchlist, that information is saved in localStorage 
 - All the saved movie titles can be accessed on the 'My Watchlist page'
-- If a user chooses to remove the title from the watchlist, Local Storage is updated to remove that movie
+- If a user chooses to remove the title from the watchlist, localStorage is updated to remove that movie
 - At the moment there is no backend to this app
 
 <br/>
