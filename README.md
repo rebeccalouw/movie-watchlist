@@ -4,24 +4,23 @@
 
 ## Demo overview
 This project consists of two pages: a Homepage and a Watchlist Page. 
-Users can search for movies and add to their personal watchlist.
 
 Possible actions:
-- Typing a movie title on the search bar
-- Once novie options are displayed, choosing the right movie and clicking to add it to the user's personal watchlist
-- Clicking on 'My Watchlist' allows to access the curated movie watchlist
-- Once the movies are not relevant to the users anymore, they can click to remove it from the watchlist
+- Inputting a movie title into the search bar and then clicking the 'Search' button
+- Once movie options are displayed, the user can add a movie their watchlist by clicking on the '+' button on the screen
+- Clicking on 'My Watchlist' allows the user to access their curated movie watchlist
+- If the user wishes to remove a movie from this watchlist, the user can do so by clicking on the '-' button on the screen
 
 
 ## Developer overview
-- The majority of the app was built with Javascript
-- The app uses the input from the search bar to inform the API call 
-- The API provides data with the movie titles searched for
-- That data is used to create the html and render the movie options to the screen
-- Once the user clicks to add movie to watchlist, that information is saved in localStorage 
-- All the saved movie titles can be accessed on the 'My Watchlist page'
-- If a user chooses to remove the title from the watchlist, localStorage is updated to remove that movie
-- At the moment there is no backend to this app
+- The majority of the app was built with JavaScript
+- The app uses the user input from the search bar to inform the API call 
+- The API returns data relative to the movie title searched for
+- That data is used to create the HTML and display the movie options on screen
+- Once the user clicks to add a movie to their watchlist, that information is converted into strings and saved in localStorage
+- All the saved movie titles can be accessed on the 'My Watchlist' page by parsing the data saved in localStorage
+- If a user chooses to remove a title from their watchlist, localStorage is updated to remove that movie
+
 
 <br/>
 
