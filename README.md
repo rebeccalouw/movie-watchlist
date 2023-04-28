@@ -1,6 +1,6 @@
 # Movie Watchlist 🎬
 
-#### ✨ Deployed/demo version ![https://main--rebecca-movie-watchlist.netlify.app/index.html](https://main--rebecca-movie-watchlist.netlify.app/index.html)
+#### ✨ Deployed/demo version <a href="https://main--rebecca-movie-watchlist.netlify.app/index.html" target="_blank" rel="noreferrer">https://main--rebecca-movie-watchlist.netlify.app/index.html</a> 
 
 ## Demo overview
 This project consists of two pages: a Homepage and a Watchlist Page. 
@@ -32,7 +32,8 @@ Possible actions:
 
 
 ## API
-- ![OMDb API](http://www.omdbapi.com/)
+- <a href="http://www.omdbapi.com/" target="_blank" rel="noreferrer">OMDb API</a> 
+
 
 ## Author: 
 👩‍💻 Rebecca Louw ![@rebeccalouw](https://github.com/rebeccalouw)
