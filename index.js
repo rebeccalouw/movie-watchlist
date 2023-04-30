@@ -14,14 +14,20 @@ searchBtn.addEventListener('click', getMoviesFromSearchBar)
 
 document.addEventListener("click", (e) => {
     if (e.target.matches(".addBtn")) {
-      addToMyWatchlist(e)
+    addToMyWatchlist(e)
     }
-  })
+})
 
+const loadingAnimation = `
+    <div id="movies-list-display" class="initial-display">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+     </div> 
+`
 
+  
 function getMoviesFromSearchBar(e) {
     e.preventDefault()
-    moviesListDisplay.innerHTML = ""
+    moviesListDisplay.innerHTML = loadingAnimation
     moviesListDisplay.classList.remove("initial-display")
     initialIcon.style.display = "none"
 
@@ -38,8 +44,8 @@ function getMoviesFromSearchBar(e) {
         })
         searchBar.value = ""
         }
-
-
+  
+  
 function getFullDetails(movieId) {
     fetch(`https://www.omdbapi.com/?apikey=${APIkey}&i=${movieId}&plot=short`)
                 .then(res => res.json())
@@ -68,7 +74,7 @@ function getFullDetails(movieId) {
 
 
 function renderHtml(movieHtmlInfo) {
-    moviesListDisplay.innerHTML = movieHtmlInfo
+moviesListDisplay.innerHTML = movieHtmlInfo
 }
 
 
@@ -92,12 +98,9 @@ function addToMyWatchlist(el) {
 
     localStorage.setItem("watchlist", JSON.stringify(myWatchlist))
 
-  }
-
-
-function renderErrorMessage() {
-    moviesListDisplay.innerHTML += `<p class="initial-display">Unable to find what you're looking for. Please try another search.</p>`
 }
 
 
-
+function renderErrorMessage() {
+    moviesListDisplay.innerHTML = `<p class="initial-display">Unable to find what you're looking for. Please try another search.</p>`
+}
