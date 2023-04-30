@@ -23,10 +23,10 @@ const loadingAnimation = `
         <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
      </div> 
 `
-
   
 function getMoviesFromSearchBar(e) {
     e.preventDefault()
+    searchBar.blur()
     moviesListDisplay.innerHTML = loadingAnimation
     moviesListDisplay.classList.remove("initial-display")
     initialIcon.style.display = "none"
